@@ -12,20 +12,20 @@ part of 'form_state.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$FormState {
+mixin _$FormCubitState {
 
  Control<String> get firstName; Control<String> get lastName; Control<int?> get age;
-/// Create a copy of FormState
+/// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$FormStateCopyWith<FormState> get copyWith => _$FormStateCopyWithImpl<FormState>(this as FormState, _$identity);
+$FormCubitStateCopyWith<FormCubitState> get copyWith => _$FormCubitStateCopyWithImpl<FormCubitState>(this as FormCubitState, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FormState&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.age, age) || other.age == age));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FormCubitState&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.age, age) || other.age == age));
 }
 
 
@@ -34,15 +34,15 @@ int get hashCode => Object.hash(runtimeType,firstName,lastName,age);
 
 @override
 String toString() {
-  return 'FormState(firstName: $firstName, lastName: $lastName, age: $age)';
+  return 'FormCubitState(firstName: $firstName, lastName: $lastName, age: $age)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $FormStateCopyWith<$Res>  {
-  factory $FormStateCopyWith(FormState value, $Res Function(FormState) _then) = _$FormStateCopyWithImpl;
+abstract mixin class $FormCubitStateCopyWith<$Res>  {
+  factory $FormCubitStateCopyWith(FormCubitState value, $Res Function(FormCubitState) _then) = _$FormCubitStateCopyWithImpl;
 @useResult
 $Res call({
  Control<String> firstName, Control<String> lastName, Control<int?> age
@@ -53,14 +53,14 @@ $Res call({
 
 }
 /// @nodoc
-class _$FormStateCopyWithImpl<$Res>
-    implements $FormStateCopyWith<$Res> {
-  _$FormStateCopyWithImpl(this._self, this._then);
+class _$FormCubitStateCopyWithImpl<$Res>
+    implements $FormCubitStateCopyWith<$Res> {
+  _$FormCubitStateCopyWithImpl(this._self, this._then);
 
-  final FormState _self;
-  final $Res Function(FormState) _then;
+  final FormCubitState _self;
+  final $Res Function(FormCubitState) _then;
 
-/// Create a copy of FormState
+/// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? firstName = null,Object? lastName = null,Object? age = null,}) {
   return _then(_self.copyWith(
@@ -74,8 +74,8 @@ as Control<int?>,
 }
 
 
-/// Adds pattern-matching-related methods to [FormState].
-extension FormStatePatterns on FormState {
+/// Adds pattern-matching-related methods to [FormCubitState].
+extension FormCubitStatePatterns on FormCubitState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -88,10 +88,10 @@ extension FormStatePatterns on FormState {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FormState value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FormCubitState value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FormState() when $default != null:
+case _FormCubitState() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -110,10 +110,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FormState value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FormCubitState value)  $default,){
 final _that = this;
 switch (_that) {
-case _FormState():
+case _FormCubitState():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -131,10 +131,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FormState value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FormCubitState value)?  $default,){
 final _that = this;
 switch (_that) {
-case _FormState() when $default != null:
+case _FormCubitState() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -154,7 +154,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FormState() when $default != null:
+case _FormCubitState() when $default != null:
 return $default(_that.firstName,_that.lastName,_that.age);case _:
   return orElse();
 
@@ -175,7 +175,7 @@ return $default(_that.firstName,_that.lastName,_that.age);case _:
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)  $default,) {final _that = this;
 switch (_that) {
-case _FormState():
+case _FormCubitState():
 return $default(_that.firstName,_that.lastName,_that.age);case _:
   throw StateError('Unexpected subclass');
 
@@ -195,7 +195,7 @@ return $default(_that.firstName,_that.lastName,_that.age);case _:
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)?  $default,) {final _that = this;
 switch (_that) {
-case _FormState() when $default != null:
+case _FormCubitState() when $default != null:
 return $default(_that.firstName,_that.lastName,_that.age);case _:
   return null;
 
@@ -207,25 +207,25 @@ return $default(_that.firstName,_that.lastName,_that.age);case _:
 /// @nodoc
 
 
-class _FormState extends FormState {
-  const _FormState({required this.firstName, required this.lastName, required this.age}): super._();
+class _FormCubitState extends FormCubitState {
+  const _FormCubitState({required this.firstName, required this.lastName, required this.age}): super._();
   
 
 @override final  Control<String> firstName;
 @override final  Control<String> lastName;
 @override final  Control<int?> age;
 
-/// Create a copy of FormState
+/// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$FormStateCopyWith<_FormState> get copyWith => __$FormStateCopyWithImpl<_FormState>(this, _$identity);
+_$FormCubitStateCopyWith<_FormCubitState> get copyWith => __$FormCubitStateCopyWithImpl<_FormCubitState>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FormState&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.age, age) || other.age == age));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FormCubitState&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.age, age) || other.age == age));
 }
 
 
@@ -234,15 +234,15 @@ int get hashCode => Object.hash(runtimeType,firstName,lastName,age);
 
 @override
 String toString() {
-  return 'FormState(firstName: $firstName, lastName: $lastName, age: $age)';
+  return 'FormCubitState(firstName: $firstName, lastName: $lastName, age: $age)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$FormStateCopyWith<$Res> implements $FormStateCopyWith<$Res> {
-  factory _$FormStateCopyWith(_FormState value, $Res Function(_FormState) _then) = __$FormStateCopyWithImpl;
+abstract mixin class _$FormCubitStateCopyWith<$Res> implements $FormCubitStateCopyWith<$Res> {
+  factory _$FormCubitStateCopyWith(_FormCubitState value, $Res Function(_FormCubitState) _then) = __$FormCubitStateCopyWithImpl;
 @override @useResult
 $Res call({
  Control<String> firstName, Control<String> lastName, Control<int?> age
@@ -253,17 +253,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$FormStateCopyWithImpl<$Res>
-    implements _$FormStateCopyWith<$Res> {
-  __$FormStateCopyWithImpl(this._self, this._then);
+class __$FormCubitStateCopyWithImpl<$Res>
+    implements _$FormCubitStateCopyWith<$Res> {
+  __$FormCubitStateCopyWithImpl(this._self, this._then);
 
-  final _FormState _self;
-  final $Res Function(_FormState) _then;
+  final _FormCubitState _self;
+  final $Res Function(_FormCubitState) _then;
 
-/// Create a copy of FormState
+/// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? firstName = null,Object? lastName = null,Object? age = null,}) {
-  return _then(_FormState(
+  return _then(_FormCubitState(
 firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
 as Control<String>,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as Control<String>,age: null == age ? _self.age : age // ignore: cast_nullable_to_non_nullable

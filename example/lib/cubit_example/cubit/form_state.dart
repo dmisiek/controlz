@@ -4,15 +4,19 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'form_state.freezed.dart';
 
 @freezed
-abstract class FormState with _$FormState, FormzMixin {
-  const factory FormState({
+abstract class FormCubitState with _$FormCubitState, FormzMixin {
+  const factory FormCubitState({
     required Control<String> firstName,
     required Control<String> lastName,
     required Control<int?> age,
-  }) = _FormState;
+  }) = _FormCubitState;
 
-  const FormState._();
+  const FormCubitState._();
 
   @override
-  List<FormzInput> get inputs => [firstName, lastName, age];
+  List<FormzInput> get inputs => [
+    firstName,
+    lastName,
+    age,
+  ];
 }

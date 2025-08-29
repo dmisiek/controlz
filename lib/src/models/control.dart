@@ -8,7 +8,7 @@ class Control<T> extends FormzInput<T, ControlError> {
     required T value,
     this.isEnabled = true,
     this.validators = const [],
-  }) : super.dirty(value);
+  }) : super.pure(value);
 
   const Control.dirty({
     required T value,
