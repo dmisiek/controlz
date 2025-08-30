@@ -39,6 +39,13 @@ class FormPage extends StatelessWidget {
             onChanged: cubit.onLastNameChanged,
           ),
           const SizedBox(height: 16),
+          TextFieldz(
+            value: state.age.value?.toString(),
+            onChanged: (value) {
+              cubit.onAgeChanged(num.tryParse(value));
+            },
+          ),
+          const SizedBox(height: 16),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(

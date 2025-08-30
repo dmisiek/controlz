@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FormCubitState {
 
- Control<String> get firstName; Control<String> get lastName; Control<int?> get age;
+ Control<String> get firstName; Control<String> get lastName; Control<num?> get age;
 /// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -45,7 +45,7 @@ abstract mixin class $FormCubitStateCopyWith<$Res>  {
   factory $FormCubitStateCopyWith(FormCubitState value, $Res Function(FormCubitState) _then) = _$FormCubitStateCopyWithImpl;
 @useResult
 $Res call({
- Control<String> firstName, Control<String> lastName, Control<int?> age
+ Control<String> firstName, Control<String> lastName, Control<num?> age
 });
 
 
@@ -67,7 +67,7 @@ class _$FormCubitStateCopyWithImpl<$Res>
 firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
 as Control<String>,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as Control<String>,age: null == age ? _self.age : age // ignore: cast_nullable_to_non_nullable
-as Control<int?>,
+as Control<num?>,
   ));
 }
 
@@ -152,7 +152,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<num?> age)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FormCubitState() when $default != null:
 return $default(_that.firstName,_that.lastName,_that.age);case _:
@@ -173,7 +173,7 @@ return $default(_that.firstName,_that.lastName,_that.age);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Control<String> firstName,  Control<String> lastName,  Control<num?> age)  $default,) {final _that = this;
 switch (_that) {
 case _FormCubitState():
 return $default(_that.firstName,_that.lastName,_that.age);case _:
@@ -193,7 +193,7 @@ return $default(_that.firstName,_that.lastName,_that.age);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Control<String> firstName,  Control<String> lastName,  Control<int?> age)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Control<String> firstName,  Control<String> lastName,  Control<num?> age)?  $default,) {final _that = this;
 switch (_that) {
 case _FormCubitState() when $default != null:
 return $default(_that.firstName,_that.lastName,_that.age);case _:
@@ -213,7 +213,7 @@ class _FormCubitState extends FormCubitState {
 
 @override final  Control<String> firstName;
 @override final  Control<String> lastName;
-@override final  Control<int?> age;
+@override final  Control<num?> age;
 
 /// Create a copy of FormCubitState
 /// with the given fields replaced by the non-null parameter values.
@@ -245,7 +245,7 @@ abstract mixin class _$FormCubitStateCopyWith<$Res> implements $FormCubitStateCo
   factory _$FormCubitStateCopyWith(_FormCubitState value, $Res Function(_FormCubitState) _then) = __$FormCubitStateCopyWithImpl;
 @override @useResult
 $Res call({
- Control<String> firstName, Control<String> lastName, Control<int?> age
+ Control<String> firstName, Control<String> lastName, Control<num?> age
 });
 
 
@@ -267,7 +267,7 @@ class __$FormCubitStateCopyWithImpl<$Res>
 firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
 as Control<String>,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as Control<String>,age: null == age ? _self.age : age // ignore: cast_nullable_to_non_nullable
-as Control<int?>,
+as Control<num?>,
   ));
 }
 

@@ -7,8 +7,19 @@ class FormCubit extends Cubit<FormCubitState> {
     : super(
         FormCubitState(
           firstName: Control.pure(value: ''),
-          lastName: Control.pure(value: ''),
-          age: Control.pure(value: null),
+          lastName: Control.pure(
+            value: '',
+            validators: [
+              RequiredValidator(),
+            ],
+          ),
+          age: Control.pure(
+            value: null,
+            validators: [
+              MinValidator(4),
+              RequiredValidator(),
+            ],
+          ),
         ),
       );
 
@@ -23,7 +34,7 @@ class FormCubit extends Cubit<FormCubitState> {
     emit(state.copyWith(lastName: control));
   }
 
-  void onAgeChanged(int? value) {
+  void onAgeChanged(num? value) {
     final control = state.age.copyWith(value: () => value);
     emit(state.copyWith(age: control));
   }

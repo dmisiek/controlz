@@ -8,7 +8,7 @@ abstract class FormCubitState with _$FormCubitState, FormzMixin {
   const factory FormCubitState({
     required Control<String> firstName,
     required Control<String> lastName,
-    required Control<int?> age,
+    required Control<num?> age,
   }) = _FormCubitState;
 
   const FormCubitState._();
