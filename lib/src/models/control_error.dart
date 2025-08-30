@@ -1,1 +1,3 @@
-abstract class ControlError {}
+abstract class ControlError {
+  const ControlError();
+}
