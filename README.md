@@ -1,39 +1,87 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+The `controlz` is package that you can understand as extended version of [formz](https://pub.dev/packages/formz).
+It implements one, simple FormzInput class named `Control` that you can reuse within many forms implementations.
+It also brings many useful validators out of the box, as well as error translations.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Package is designed to work well with any state management solutions, especially with [bloc](https://pub.dev/packages/flutter_bloc).
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Manage forms state as strongly-typed classes
+- Control supports enable & pending status
+- Use many validators out of the box
+- Use already prepared error messages (with translations)
+
+## Implementation state
+
+Due to the fact that the package is currently more of a concept than an actual, working solution, 
+table below presents the implementation status of individual features.
+
+| Part           | State              | 
+|----------------|--------------------|
+| Control class  | Almost implemented |
+| Validators     | Poorly implemented |
+| Error messages | Not implemented    |
+| Examples       | Poorly implemented |
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add `controlz` as dependency within your `pubspec.yaml`. That's it.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+  controlz: any
 ```
 
-## Additional information
+### Control
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+TODO: Describe and provide examples
+
+### Validators
+
+#### Common validators
+
+| Class                | Description                             | 
+|----------------------|-----------------------------------------|
+| `RequiredValidator`  | Validates if value is not null or empty |
+
+#### Collection validators
+
+| Class               | Description                                                          | 
+|---------------------|----------------------------------------------------------------------|
+| `CountValidator`    | Validates if collection length is exact to provided size             |
+| `MinCountValidator` | Validates if collection length is greater than provided minimum size |
+| `MaxCountValidator` | Validates if collection length is less than provided maximum size    |
+| `DistinctValidator` | Validates if collection contains only distinct elements              |
+
+#### Comparable validators
+
+| Class                 | Description                                               |
+|-----------------------|-----------------------------------------------------------|
+| `MinValidator`        | Validates if value is not lower than provided threshold   |
+| `MaxValidator`        | Validates if value is not greater than provided threshold |
+| `RangeValidator`      | Validates if value is included into provided range        |
+| `OutOfRangeValidator` | Validates if value is not included into provided range    |
+
+#### Numeric validators
+
+| Class                  | Description                           |
+|------------------------|---------------------------------------|
+| `IntegerValidator`     | Validates if value is an integer      |
+| `OddNumberValidator`   | Validates if value is an odd number   |
+| `EvenNumberValidator`  | Validates if value is an even number  |
+| `PrimeNumberValidator` | Validates if value is an prime number |
+
+#### String validators
+
+| Class                 | Description                                          |
+|-----------------------|------------------------------------------------------|
+| `LengthValidator`     | Validates if text length is exact to provided length |
+| `MinLengthValidator`  | Validates if text is longer than provided threshold  |
+| `MinLengthValidator`  | Validates if text is shorter than provided threshold |
+| `StartsWithValidator` | Validates if text starts with provided value         |
+| `EndsWithValidator`   | Validates if text ends with provided value           |
+
+### Error translations
+
+Package contains error messages for each created error translated into supported languages:
+- English (en)
+- Polish (pl)
